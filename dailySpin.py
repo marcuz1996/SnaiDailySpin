@@ -4,9 +4,6 @@ from selenium.webdriver.chrome.options import Options
 import time
 import telegram
 import datetime
-#from selenium.webdriver.common.keys import Keys
-
-
 
 PATH_CHROME = "Browser_Selenium/chromedriver.exe"
 URL_GAME = "https://www.snai.it/play/games/1516"
@@ -14,7 +11,6 @@ URL_LOGIN = "https://www.snai.it/user"
 TOKEN = ""
 CHAT_ID = 
 PATH_SCREENSHOT = "screenshot.png"
-
 
 def login(usr, psw):
     #Create new session
@@ -55,7 +51,6 @@ def openGame(driver):
     time.sleep(10)
     #Take screenshot
     driver.save_screenshot('screenshot.png')
-
     
 def sendCredit(driver):
     #Go to user page
@@ -70,12 +65,10 @@ def sendScreenshot():
     #Send photo to telegram
 	bot.send_photo(chat_id=CHAT_ID, photo=open(PATH_SCREENSHOT, 'rb'),caption=str(datetime.datetime.now()))
 
-
 def sendMessage(text_message):
     bot = telegram.Bot(token=TOKEN)
     #Send message to telegram
     bot.send_message(chat_id=CHAT_ID, text=text_message)
-
 
 def createSession(usr, psw, nick):
     driver = login(usr, psw)
@@ -90,8 +83,6 @@ def createSession(usr, psw, nick):
     else:
         print ("[]LOGIN FAILED")
 
-
-#MAIN
 file = open('users.txt', 'r')
 lines = file.readlines()
 for line in lines:
