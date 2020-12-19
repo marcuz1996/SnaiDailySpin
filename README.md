@@ -1,4 +1,4 @@
-# Daily Spin Script
+# Automatic Daily Spin
 
 ## Description
 This python script runs automatically the daily-spin-game of the Snai website and sends both the game result and the updated credit on Telegram chat through a bot.  
@@ -22,5 +22,5 @@ CHAT_ID : put the chat id integer corresponding to your bot's (it has '-' before
 2. After creation you find the token in the chat.
 3. Create a gruop with bot.
 4. send this message ```/my_id@BotName```.
-5. Go to following url: https://api.telegram.org/botXXX:YYYY/getUpdates where XXX:YYYY is the token of your bot.
+5. Go to following url: ht<span>tps://api.telegram.org/botXXX:YYYY/getUpdates</span> where XXX:YYYY is the token of your bot.
 6. Look for ```"chat":{"id":-zzzzzzzzzz, ``` where -zzzzzzzzzz is your chat id
