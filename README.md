@@ -20,7 +20,7 @@ CHAT_ID : put the chat id integer corresponding to your bot's (it has '-' before
 ### Telegram setup
 1. Create a bot with BotFather.
 2. After creation you find the token in the chat.
-3. Create a gruop with bot.
+3. Create a group with bot.
 4. send this message ```/my_id@BotName```.
 5. Go to following url: ht<span>tps://api.telegram.org/botXXX:YYYY/getUpdates</span> where XXX:YYYY is the token of your bot.
 6. Look for ```"chat":{"id":-zzzzzzzzzz, ``` where -zzzzzzzzzz is your chat id
